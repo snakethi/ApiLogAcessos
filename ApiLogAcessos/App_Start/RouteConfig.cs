@@ -13,9 +13,6 @@ namespace ApiLogAcessos
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            //string teste = Cry.Encrypt("DESKTOP-BVKCR2J\\SQLDB01");
-
-
             ILocalDB_EndPoints LEndPoints = new LocalDB_EndPoints();
 
             LEndPoints.SetaConexao();

@@ -17,7 +17,9 @@ namespace LocalDBInterfaces.Inferfaces_LocalDB
         public void SetaConexao()
         {
             string Servidor = Cry.Decrypt(ConfigurationSettings.AppSettings["01"].ToString());
-            DbSession.connect = $"Data Source={Servidor};Initial Catalog=LocalDB;User Id=sa;Password=26@thi;";
+            string User = Cry.Decrypt(ConfigurationSettings.AppSettings["03"].ToString());
+            string Senha = Cry.Decrypt(ConfigurationSettings.AppSettings["04"].ToString());
+            DbSession.connect = $"Data Source={Servidor};Initial Catalog=LocalDB;User Id={User};Password={Senha};";
         }
         /*Processo de Login no Banco de Foi Setado*/
         public async Task<List<Usuario>> LoginSis(string login, string senha, string ip)

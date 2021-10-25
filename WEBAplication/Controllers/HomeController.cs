@@ -33,7 +33,7 @@ namespace WEBAplication.Controllers
         private static int TotalLogAcesso = 0;
 
         //URL da API 
-        string Baseurl = "https://localhost:44375/";
+        string Baseurl = ConfigurationSettings.AppSettings["02"].ToString();
 
         public async Task<ActionResult> Index()
         {

@@ -1,0 +1,102 @@
+﻿
+<div class="modal-header divback">
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="FecharEdtModal()"></button>
+</div>
+
+<div class="modal-body bg-dark">
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvNomeEdt" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-user-circle"></i></span>
+                </div>
+                <input id="txtNomeEdt" type="text" placeholder="COLOQUE SEU NOME!" class="form-control bg-transparent text-white" onblur="Valida('Valida','NomeEdt')" onfocus="Valida('','NomeEdt')" value="" required>
+                <div id="ValidaNomeEdt" class="invalid-feedback">
+                    PREENCHA O CAMPO COM SEU NOME!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvLoginEdt" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-user-circle"></i></span>
+                </div>
+                <input id="txtLoginEdt" type="text" placeholder="COLOQUE SEU LOGIN!" class="form-control bg-transparent text-white" onblur="Valida('Valida','LoginEdt')" onfocus="Valida('','LoginEdt')" value="" required>
+                <div id="ValidaLoginEdt" class="invalid-feedback">
+                    PREENCHA O CAMPO COM SEU Login!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="row">
+                <div class="input-group mb-3 input-group-sm">
+                    <div id="dvPassEdt" class="input-group-prepend">
+                        <span class="input-group-text bg-transparent text-white"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input id="txtPassEdt" type="password" placeholder="COLOQUE SUA SENHA!" class="form-control bg-transparent text-white"
+                           onfocus="HabilitaVSenha('Valida','PassEdt')" onblur="HabilitaVSenha('','PassEdt')" onkeyup="ValidaSenha('PassEdt')" pattern="" required>
+                    <div class="input-group-append">
+                        <span id="revelaPassEdt" class="input-group-text bg-transparent text-white"><i id="icRevPassEdt" class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div id="VerificaPassEdt" class="row d-none">
+                <h3 class="text-white">A Senha deve Conter :</h3>
+                <p id="MPassEdt" class="invalid">Uma <b>Letra</b> Maiuscula</p>
+                <p id="mPassEdt" class="invalid">Uma <b>Letra</b> Miuscula</p>
+                <p id="NPassEdt" class="invalid">Um <b>Numero</b></p>
+                <p id="SPassEdt" class="invalid">Um <b>Caracter Especial</b></p>
+                <p id="TPassEdt" class="invalid">No Minimo <b>10 caracteres</b></p>
+                <p id="BPassEdt" class="invalid">Não Conter <b>espaços em branco</b></p>
+                <p id="RPassEdt" class="invalid">Não Conter <b>caracters repeditos</b></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvPassEdt2" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-key"></i></span>
+                </div>
+                <input id="txtPassEdt2" type="password" placeholder="CONFIRME SUA SENHA!" class="form-control bg-transparent text-white"
+                       onblur="ValidaSenhaS('Valida','PassEdt','PassEdt2')" onkeyup="ValidaSenhaS('Valida','PassEdt','PassEdt2')" onfocus="ValidaSenhaS('','PassEdt','PassEdt2')" required>
+                <div class="input-group-append">
+                    <span id="revelaPassEdt2" class="input-group-text bg-transparent text-white"><i id="icRevPassEdt2" class="fas fa-eye"></i></span>
+                </div>
+                <div id="ValidaSenhasPassEdt2" class="invalid-feedback">
+                    SENHAS NÃO SÃO IGUAIS!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="form-check form-switch">
+                <input id="ADMCheck" class="form-check-input" type="checkbox" >
+                <label class="form-check-label text-white" for="ADMCheck">ADMINISTRADOR</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer divback">
+    <div class="row mt-1 align-content-center justify-content-center">
+        <div class="col d-flex align-content-center justify-content-center">
+            <button id="BtnEditUser" type="button" onclick="" class="btn-success w-100">Salvar</button>
+        </div>
+        @*<div class="col d-flex align-content-center justify-content-center">
+                <button id="BtnExcluirUser" type="button" onclick="" class="btn-danger w-100">Excluir</button>
+            </div>*@
+    </div>
+</div>
+

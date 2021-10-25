@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<div class="container-fluid d-flex w-100 p-1 p-lg-5 m-1 m-lg-1 justify-content-center">
+
+    @Html.Partial("_UpdUsuario")
+
+    <div id="CadastroADM" class="p-5 col-6 align-content-center justify-content-center divback controlePagInicial d-none">
+        @Html.Partial("_ADMUsuarios")
+    </div>
+
+    <div id="LogAcesso" class="p-5 col-6 align-content-center justify-content-center divback d-block">
+        @Html.Partial("_LogAcesso")
+    </div>
+
+
+</div>
+
+

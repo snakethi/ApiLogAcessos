@@ -1,0 +1,29 @@
+﻿<table id="LogAcessoGrid" class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data/Hora</th>
+            <th scope="col">Nome Usuário</th>
+            <th scope="col">IP de Acesso</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var count = ViewBag.ComeçoGridLogAcesso + 1;
+
+            var item = ViewBag.LogAcessoGrid;
+
+            for (int i = ViewBag.ComeçoGridLogAcesso; i < ViewBag.FimGridLogAcesso; i++)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td><input name="Data_Hora" class="border-0 GridText" type="text" placeholder="" value='@item[i].DataHoraAcesso'readonly /></td>
+                    <td><input name="Nome_Usuario" class="border-0 GridText" type="text" placeholder="" value='@item[i].Nome' readonly /></td>
+                    <td><input name="IP_de_Acesso" class="border-0 GridText" type="text" placeholder="" value='@item[i].EnderecoIp' readonly /></td>
+                </tr>
+
+                count++;
+            }
+        }
+    </tbody>
+</table>

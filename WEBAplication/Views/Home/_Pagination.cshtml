@@ -1,0 +1,78 @@
+﻿<nav aria-label="...">
+    <ul class="pagination pagination-sm justify-content-center">
+        @{
+            int countPG = 0;
+
+            if (ViewBag.NumeroMarcadores > 10)
+            {
+                <li id="AntLogAcesso" class="page-item pgNone">
+                    <a class="page-link" href="javascript:ControlePaginationAnt()">ANTERIORES</a>
+                </li>
+            }
+
+            for (int i = 0; i < ViewBag.NumeroMarcadores; i++)
+            {
+                countPG++;
+
+                if (ViewBag.Pagina == countPG)
+                {
+                    <li id="pg'@countPG'" class="page-item pg active pgBlock">
+                        <a class="page-link bg-meu" href="javascript:CarregaPaginaLog(@countPG);">
+                            @countPG.ToString()
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    if (countPG > 10)
+                    {
+                        <li id="pg'@countPG'" class="page-item pg pgNone">
+                            <a class="page-link bg-meu" href="javascript:CarregaPaginaLog(@countPG);">
+                                @countPG.ToString()
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li id="pg'@countPG'" class="page-item pg pgBlock">
+                            <a class="page-link bg-meu" href="javascript:CarregaPaginaLog(@countPG);">
+                                @countPG.ToString()
+                            </a>
+                        </li>
+                    }
+                }
+            }
+
+            if (ViewBag.NumeroMarcadores > 10)
+            {
+                <li id="PrxLogAcesso" class="page-item pgBlock">
+                    <a class="page-link" href="javascript:ControlePaginationProx()">PROXIMOS</a>
+                </li>
+            }
+
+        }
+    </ul>
+</nav>
+
+@{
+    if (ViewBag.TotalLogAcesso > 0)
+    {
+        <div id="chartdiv" class="Grafico d-none"></div>
+
+        <div class="row mt-1 align-content-center justify-content-center">
+            <div class="col-11 col-lg-4 d-flex align-content-center justify-content-center">
+                <button id="BtnGrafico" type="button" onclick="Grafico()" class="btn-success w-50">Grafico</button>
+            </div>
+            <div class="col-11 col-lg-4 align-content-center justify-content-center">
+                <div class="row justify-content-center">
+                    <button id="BtnXML" type="button" onclick="GeraXML()" class="btn-success w-50">Exportar XML</button>
+                </div>
+                <div class="row text-center">
+                    <a id="arquivoXML" href="~/Source/Log_Acesso.xml" class="d-none" download>Download Arquivo</a>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+

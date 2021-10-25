@@ -1,0 +1,107 @@
+﻿body {
+}
+
+/*Css para fazer o Header do topo da Pagina Index*/
+.header {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+    background-color: #212529a1;
+    height: 60px;
+}
+
+/*Formatação no Nome do Sistema na Header*/
+#NomeSistema {
+    margin-left: 1%;
+    top: 2px;
+    color: white;
+}
+
+/*Formatação do Botão com a Primeira Letra do nome do usuario na Header*/
+#BTNUsuario {
+    font-size: 25px;
+    right: 65px;
+}
+
+/*Formatação do Botão para logout Controle de Usuario na Header*/
+#BTNSair {
+    font-size: 20px;
+    right: 5px;
+}
+
+/*Formatação comum para BTNUsuario e BTNSair*/
+.btn {
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    position: absolute;
+}
+
+    .btn:hover {
+        background-color: black;
+        color: white;
+    }
+
+/*Formatação para os Links na Header*/
+.links {
+    background-color: white;
+    height: auto;
+    width: 25%;
+    margin-left: 1%;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .links:hover {
+        background-color: black;
+        color: white;
+    }
+
+/*Div do meio do Header*/
+#DivMeio {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/*Div do Inicio do Header*/
+#DivInicio {
+    width: 24%;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    margin-left: 1%;
+}
+
+/*Formatação de texto das Grids*/
+.GridText {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+/*Formatação da Tabelas das Grids*/
+table thead {
+    text-align: center;
+    color: white;
+}
+
+table tbody tr:hover {
+    background-color: Highlight;
+}
+
+/*Formatação do Grafico que fica na Pagina de LogAcesso*/
+.Grafico {
+    width: 100%;
+    height: 400px;
+}

@@ -1,0 +1,46 @@
+﻿<div class="row align-content-center justify-content-center">
+    <div class="col-11 col-lg-6 d-flex align-content-center justify-content-center">
+        <img class="imgLogoDentro" src="~/Source/user.png" />
+    </div>
+</div>
+<div class="row m-2 d-flex align-content-center justify-content-center">
+    <div class="col d-flex align-content-center justify-content-center">
+        <h2 class="text-white">LOG ACESSOS</h2>
+    </div>
+</div>
+
+<div class="row m-2 d-flex align-content-center justify-content-center">
+    <div class="col">
+
+        <label for="UsuariosList" class="form-label text-white">Escolha um Usuário na Lista:</label>
+        <input class="form-control" list="UsuariosList" name="UsuariosList" id="UsuariosListInput">
+        <datalist id="UsuariosList">
+            @{
+                foreach (var item2 in ViewBag.ADMGrid)
+                {
+                    <option id="@item2.Usuarioid" value="@item2.Login"></option>
+                }
+            }
+        </datalist>
+    </div>
+</div>
+
+<div class="row m-2 d-flex align-content-center justify-content-center">
+    <div class="col">
+
+        @Html.Partial("_LogAcessogrid")
+
+
+        <div id="Pagination" class="row">
+            @Html.Partial("_Pagination")
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+

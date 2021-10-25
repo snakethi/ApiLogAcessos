@@ -1,0 +1,84 @@
+﻿body {
+}
+
+/*Cor de fundo das divs principais do Site*/
+.divback {
+    background-color: #212529a1;
+}
+
+/*Controles das senhas*/
+/*Coloca a cor do texto em verde e um ok para informar que esta errado*/
+.valid {
+    color: green;
+}
+
+    .valid:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+    }
+
+/*Coloca a cor do texto em vermelho e um X para informar que esta errado */
+.invalid {
+    color: red;
+}
+
+    .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+    }
+
+/*Formata a Imagem de Fundo das Paginas*/
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+/*Formata o Botão da Pagina de Erro Padrão do Site*/
+.btnHome:hover{
+    background-color: black;
+    color: white;
+}
+
+/*Some com o Elemento*/
+.pgNone{
+    display: none !important;
+}
+
+/*Faz o Elemento Aparecer*/
+.pgBlock {
+    display: block !important;
+}
+
+/*Logo do Sitema da Pagina de Login ou em Destaque*/
+.imgLogo {
+    height: 150px;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+/*Logo do Sitema para as outras Paginas do site */
+.imgLogoDentro {
+    height: 50px;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+/*Animação do Logo do Sistema*/
+@keyframes logo {
+    0% {
+        transform: rotateX(360deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/solid.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/regular.css" rel="stylesheet" />
+    <link href="~/CSS/Principal.css" rel="stylesheet" />
+    <link href="~/CSS/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <img src="~/Source/office-desk-computer-light.jpg" class="bg" alt="" />
+
+    <div class="header">
+        <div id="DivInicio">
+            <h2 id="NomeSistema">WEB APLICATION</h2>
+        </div>
+        <div id="DivMeio">
+            <a id="LinkAdmUser" class="links">Gerenciar Usuários</a>
+            <a id="LinkLogAcessos" class="links" href="">Log de Acessos</a>
+        </div>
+        <button id="BTNUsuario" class="btn">@ViewBag.Letra</button>
+        <button id="BTNSair" class="btn"><i class="fas fa-door-open"></i></button>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Scripts/Site/Site.js"></script>
+
+</body>
+</html>

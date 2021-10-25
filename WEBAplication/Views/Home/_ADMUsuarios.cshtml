@@ -1,0 +1,42 @@
+﻿
+
+
+<div class="row align-content-center justify-content-center">
+    <div class="col-11 col-lg-6 d-flex align-content-center justify-content-center">
+        <img class="imgLogoDentro" src="~/Source/user.png" />
+    </div>
+</div>
+<div class="row m-2 d-flex align-content-center justify-content-center">
+    <div class="col d-flex align-content-center justify-content-center">
+        <h2 class="text-white">USUÁRIO CADASTRADOS</h2>
+    </div>
+</div>
+
+
+<div class="row m-2 d-flex align-content-center justify-content-center">
+    <div class="col">
+        <div id="ADMUsuariosGrid" class="row">
+            @Html.Partial("_ADMUsuariosGrid")
+        </div>
+        <div id="PaginationUser" class="row">
+            @Html.Partial("_PaginationUser")
+        </div>
+    </div>
+</div>
+
+<div class="row mt-2 align-content-center justify-content-center">
+    <div class="col-11 col-lg-4 d-flex align-content-center justify-content-center">
+        <button id="BtnCadUser" type="button" onclick="AbriCadUser()" class="btn-success w-50">Cadastrar</button>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModaltEditUser" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content" id="htmlContainer">
+            @Html.Partial("_EditUser")
+        </div>
+    </div>
+</div>
+
+

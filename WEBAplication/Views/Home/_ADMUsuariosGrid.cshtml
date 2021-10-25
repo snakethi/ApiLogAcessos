@@ -1,0 +1,44 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">UsuarioId</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Login</th>
+            <th scope="col">ADM</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var count = ViewBag.ComeçoGridUser + 1;
+
+            var item = ViewBag.ADMGrid;
+
+            for (int i = ViewBag.ComeçoGridUser; i < ViewBag.FimGridUser; i++)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td><button class="btn-success text-black" type="submit" onclick="EdtUser('@item[i].Usuarioid','@item[i].Nome','@item[i].Login','@item[i].IsAdmin')"><i class="fas fa-user-edit"></i></button></td>
+                    <td><button class="btn-danger text-black" type="submit" onclick="ExcluirUser('@item[i].Usuarioid')"><i class="fas fa-user-minus"></i></button></td>
+                    <td><input name="IUsuarioidd" class="border-0 GridText" type="text" placeholder="" value=@item[i].Usuarioid readonly /></td>
+                    <td><input name="Login" class="border-0 GridText" type="text" placeholder="" value='@item[i].Nome' readonly /></td>
+                    <td><input name="Login" class="border-0 GridText" type="text" placeholder="" value='@item[i].Login' readonly /></td>
+                    @if (item[i].IsAdmin)
+                    {
+                        <td><input name="ADM" class="border-0 GridText" type="text" placeholder="" value='true' readonly /></td>
+                    }
+                    else
+                    {
+                        <td><input name="ADM" class="border-0 GridText" type="text" placeholder="" value='false' readonly /></td>
+                    }
+
+                </tr>
+
+                count++;
+            }
+        }
+    </tbody>
+</table>
+

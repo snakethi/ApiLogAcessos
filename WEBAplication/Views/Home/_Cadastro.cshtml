@@ -1,0 +1,100 @@
+﻿<div id="Cadastro" class="p-5 col-12 col-lg-5 align-content-center justify-content-center divback d-none">
+    <div class="row align-content-center justify-content-center">
+        <div class="col-11 col-lg-6 d-flex align-content-center justify-content-center">
+            <img class="imgLogo" src="~/Source/user.png" />
+        </div>
+    </div>
+    <div class="row m-2 d-flex align-content-center justify-content-center">
+        <div class="col d-flex align-content-center justify-content-center">
+            <h2 class="text-white">Cadastro de Usuario</h2>
+        </div>
+    </div>
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvNomeCad" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-user-circle"></i></span>
+                </div>
+                <input id="txtNomeCad" type="text" placeholder="COLOQUE SEU NOME!" class="form-control bg-transparent text-white" onblur="Valida('Valida','NomeCad')" onfocus="Valida('','NomeCad')" required>
+                <div id="ValidaNomeCad" class="invalid-feedback">
+                    PREENCHA O CAMPO COM SEU NOME!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvLoginCad" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-user-circle"></i></span>
+                </div>
+                <input id="txtLoginCad" type="text" placeholder="COLOQUE SEU LOGIN!" class="form-control bg-transparent text-white" onblur="Valida('Valida','LoginCad')" onfocus="Valida('','LoginCad')" required>
+                <div id="ValidaLoginCad" class="invalid-feedback">
+                    PREENCHA O CAMPO COM SEU Login!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="row">
+                <div class="input-group mb-3 input-group-sm">
+                    <div id="dvPassCad" class="input-group-prepend">
+                        <span class="input-group-text bg-transparent text-white"><i class="fas fa-key"></i></span>
+                    </div>
+                    <input id="txtPassCad" type="password" placeholder="COLOQUE SUA SENHA!" class="form-control bg-transparent text-white"
+                           onfocus="HabilitaVSenha('Valida','PassCad')" onblur="HabilitaVSenha('','PassCad')" onkeyup="ValidaSenha('PassCad')" pattern="" required>
+                    <div class="input-group-append">
+                        <span id="revelaPassCad" class="input-group-text bg-transparent text-white"><i id="icRevPass" class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div id="VerificaPassCad" class="row d-none">
+                <h3 class="text-white">A Senha deve Conter :</h3>
+                <p id="MPassCad" class="invalid">Uma <b>Letra</b> Maiuscula</p>
+                <p id="mPassCad" class="invalid">Uma <b>Letra</b> Miuscula</p>
+                <p id="NPassCad" class="invalid">Um <b>Numero</b></p>
+                <p id="SPassCad" class="invalid">Um <b>Caracter Especial</b></p>
+                <p id="TPassCad" class="invalid">No Minimo <b>10 caracteres</b></p>
+                <p id="BPassCad" class="invalid">Não Conter <b>espaços em branco</b></p>
+                <p id="RPassCad" class="invalid">Não Conter <b>caracters repeditos</b></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-xl-6">
+            <div class="input-group mb-3 input-group-sm">
+                <div id="dvPassCad2" class="input-group-prepend">
+                    <span class="input-group-text bg-transparent text-white"><i class="fas fa-key"></i></span>
+                </div>
+                <input id="txtPassCad2" type="password" placeholder="CONFIRME SUA SENHA!" class="form-control bg-transparent text-white"
+                       onblur="ValidaSenhaS('Valida','PassCad','PassCad2')" onkeyup="ValidaSenhaS('','PassCad','PassCad2')" onfocus="ValidaSenhaS('','PassCad','PassCad2')" required>
+                <div class="input-group-append">
+                    <span id="revelaPassCad2" class="input-group-text bg-transparent text-white"><i id="icRevPass2" class="fas fa-eye"></i></span>
+                </div>
+                <div id="VerificaPassCad2" class="invalid-feedback">
+                    SENHAS NÃO SÃO IGUAIS!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-lg-4 d-flex align-content-center justify-content-center">
+            <button id="Login" type="button" onclick="CadastrarUser()" class="btn-success w-50">Cadastrar</button>
+        </div>
+    </div>
+    <div class="row mt-2 align-content-center justify-content-center">
+        <div class="col-11 col-lg-4 d-flex align-content-center justify-content-center">
+            <button id="BtnCadastroSair" type="button" class="btn-danger w-50">Sair</button>
+        </div>
+    </div>
+
+</div>

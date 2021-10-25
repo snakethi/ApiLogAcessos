@@ -1,0 +1,56 @@
+﻿<nav aria-label="...">
+    <ul class="pagination pagination-sm justify-content-center">
+        @{
+            int countPG = 0;
+
+            if (ViewBag.NumeroMarcadoresUser > 10)
+            {
+                <li id="AntLogAcessoUser" class="page-item pgNone">
+                    <a class="page-link" href="javascript:ControlePaginationUserAnt()">ANTERIORES</a>
+                </li>
+            }
+
+            for (int i = 0; i < ViewBag.NumeroMarcadoresUser; i++)
+            {
+                countPG++;
+
+                if (ViewBag.PaginaUser == countPG)
+                {
+                    <li id="pgUser'@countPG'" class="page-item pgUser active pgBlock">
+                        <a class="page-link bg-meu" href="javascript:CarregaPaginaLogUser(@countPG);">
+                            @countPG.ToString()
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    if (countPG > 10)
+                    {
+                        <li id="pgUser'@countPG'" class="page-item pgUser pgNone">
+                            <a class="page-link bg-meu" href="javascript:CarregaPaginaLogUser(@countPG);">
+                                @countPG.ToString()
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li id="pgUser'@countPG'" class="page-item pgUser pgBlock">
+                            <a class="page-link bg-meu" href="javascript:CarregaPaginaLogUser(@countPG);">
+                                @countPG.ToString()
+                            </a>
+                        </li>
+                    }
+                }
+            }
+
+            if (ViewBag.NumeroMarcadoresUser > 10)
+            {
+                <li id="PrxLogAcessoUser" class="page-item pgBlock">
+                    <a class="page-link" href="javascript:ControlePaginationUserProx()">PROXIMOS</a>
+                </li>
+            }
+
+        }
+    </ul>
+</nav>
+

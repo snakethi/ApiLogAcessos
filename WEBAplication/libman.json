@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.1.3",
+      "destination": "Content/bootstrap/"
+    },
+    {
+      "library": "font-awesome@5.15.4",
+      "destination": "Content/font-awesome/"
+    },
+    {
+      "library": "paginationjs@2.1.5",
+      "destination": "Content/paginationjs/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "Scripts/jquery/"
+    }
+  ]
+}

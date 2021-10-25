@@ -1,0 +1,9 @@
+<root type="array">
+  <item type="object">
+    <LogAcessoId type="number">15</LogAcessoId>
+    <UsuarioId type="number">1008</UsuarioId>
+    <Nome type="string">THIAGO1</Nome>
+    <EnderecoIp type="string">192.168.0.1</EnderecoIp>
+    <DataHoraAcesso type="string">2021-10-22T21:48:16.26</DataHoraAcesso>
+  </item>
+</root>
